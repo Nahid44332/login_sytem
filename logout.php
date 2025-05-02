@@ -1,1 +1,11 @@
-<?php session_start(); session_destroy(); header("Location: login.php"); ?>
+<?php
+session_start();
+
+// সেশন ডিস্ট্রয় (logout)
+session_unset();
+session_destroy();
+
+// ইউজারকে লগইন পেজে রিডিরেক্ট করুন
+header("Location: index.php");
+exit;
+?>
